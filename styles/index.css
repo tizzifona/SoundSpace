@@ -31,6 +31,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 10px;
   font-weight: 500;
+  font-size: 2.5%;
 }
 
 .index-title {
@@ -38,6 +39,7 @@ body {
   color: #ffffff;
   margin-top: 30px;
   font-weight: 200;
+  font-size: 12%;
 }
 
 .index-button {
@@ -50,63 +52,14 @@ body {
   font-weight: 600;
   margin-top: 40px;
   transition: background-color 0.5s ease;
+  padding: 1.5% 2%;
+  font-size: 1.8%;
+  letter-spacing: 0.5%;
 }
 
 .index-button:hover {
   background-color: #000000;
   color: #ffffff;
-}
-
-@media screen and (min-width: 1025px) {
-  .index-text {
-    font-size: 28px;
-  }
-
-  .index-title {
-    font-size: 130px;
-  }
-
-  .index-button {
-    padding: 15px 20px;
-    font-size: 20px;
-    letter-spacing: 5px;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .index-text {
-    margin-top: 25vh;
-    font-size: 22px;
-    letter-spacing: 8px;
-  }
-
-  .index-title {
-    font-size: 90px;
-  }
-
-  .index-button {
-    padding: 14px 20px;
-    font-size: 18px;
-    letter-spacing: 4px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .index-text {
-    margin-top: 30vh;
-    font-size: 18px;
-    letter-spacing: 5px;
-  }
-
-  .index-title {
-    font-size: 60px;
-  }
-
-  .index-button {
-    padding: 12px 18px;
-    font-size: 16px;
-    letter-spacing: 3px;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -123,5 +76,88 @@ body {
     padding: 10px 15px;
     font-size: 14px;
     letter-spacing: 2px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .index-text {
+    font-size: 18px;
+    letter-spacing: 5px;
+  }
+
+  .index-title {
+    font-size: 60px;
+  }
+
+  .index-button {
+    padding: 12px 18px;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .index-text {
+    font-size: 22px;
+    letter-spacing: 8px;
+  }
+
+  .index-title {
+    font-size: 90px;
+  }
+
+  .index-button {
+    padding: 14px 20px;
+    font-size: 18px;
+    letter-spacing: 4px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .index-text {
+    font-size: 28px;
+  }
+
+  .index-title {
+    font-size: 130px;
+  }
+
+  .index-button {
+    padding: 15px 20px;
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 2000px) {
+  .index-text {
+    font-size: 36px;
+  }
+
+  .index-title {
+    font-size: 160px;
+  }
+
+  .index-button {
+    padding: 20px 30px;
+    font-size: 24px;
+    letter-spacing: 6px;
+  }
+}
+
+@media screen and (min-width: 2001px) {
+  .index-text {
+    font-size: 50px;
+  }
+
+  .index-title {
+    font-size: 240px;
+  }
+
+  .index-button {
+    padding: 30px 40px;
+    font-size: 40px;
+    letter-spacing: 10px;
+    border-radius: 50px;
   }
 }
