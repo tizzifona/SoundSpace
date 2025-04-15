@@ -1,1 +1,189 @@
 /* styles for piano page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-color: #022435;
+    flex: 1;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+header {
+    background-color: #d4ecf4;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+}
+
+footer {
+    background-color: #d4ecf4;
+    padding: 10px;
+    text-align: center;
+    font-weight: 14px;
+    letter-spacing: 2px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-list li:not(:first-child) {
+    margin-right: 40px;
+}
+
+.nav-link img {
+    width: 70px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid #022435;
+}
+
+.nav-link:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(2, 36, 53, 0.3);
+    border: none;
+}
+
+.nav-link{
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 5px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.logo::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #022435;
+    transition: width 0.3s ease;
+}
+
+.logo:hover::after {
+    width: 100%;
+}
+
+.logo:hover {
+    color:#022435;
+}
+
+.logo img{
+    width: 70px;
+}
+
+to  Everyone
+.keyboard {
+  display: flex;
+  position: relative;
+  margin: 2rem 0;
+  padding: 1rem;
+  background: #333;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  height: 300px;
+}
+
+.white-keys {
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.black-keys {
+  display: flex;
+  position: absolute;
+  top: 2;
+  left: 45px;
+  z-index: 2;
+}
+
+.key {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.1s;
+}
+
+.key.white {
+  width: 60px;
+  height: 200px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+  margin-right: 2px;
+}
+
+.key.black {
+  width: 40px;
+  height: 120px;
+  background: #333;
+  border: 1px solid #000;
+  border-radius: 0 0 3px 3px;
+  margin-right: 22px;
+}
+
+.key.black:nth-child(3) {
+  margin-right: 42px;
+}
+
+.key:active,
+.key.active {
+  transform: translateY(2px);
+}
+
+.key.white:active,
+.key.white.active {
+  background-color: #e0e0e0;
+}
+
+.key.black:active,
+.key.black.active {
+  background-color: #222;
+}
+.key::after {
+  content: attr(data-note);
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+}
+
+.key.white::after {
+  color: #333;
+}
+
+.key.black::after {
+  color: white;
+  bottom: 5px;
+}
