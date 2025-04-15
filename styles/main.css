@@ -31,10 +31,12 @@ body {
     justify-content: flex-start;
   }
 
-  a {
+  .logo-container a {
     text-decoration: none; 
     color: inherit;
     font-weight: bolder;
+    display: flex;
+    align-items: center;
 
 }
   .logo-container p {
