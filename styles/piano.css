@@ -101,8 +101,14 @@ body {
 .logo img{
     width: 70px;
 }
-
-to  Everyone
+.title-piano {
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
 .keyboard {
   display: flex;
   position: relative;
@@ -170,7 +176,7 @@ to  Everyone
 .key.black.active {
   background-color: #222;
 }
-.key::after {
+.key::after { 
   content: attr(data-note);
   position: absolute;
   bottom: 10px;
