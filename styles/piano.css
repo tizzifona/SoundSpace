@@ -193,3 +193,68 @@ body {
   color: white;
   bottom: 5px;
 }
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-list li:not(:first-child) {
+        margin-right: 0;
+    }
+
+    .nav-link img {
+        width: 50px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .title-piano {
+        width: 90%;
+        font-size: 24px;
+        letter-spacing: 3px;
+        position: flex;
+        text-align: center;
+    }
+
+    .keyboard {
+        height: 200px;
+        width: 420px;
+
+    }
+
+    .key.white {
+        height: 133.33px;
+        width: 33.33px;
+    }
+
+    .key.black {
+        height: 70px;
+        width: 25.33px;
+        margin-right: 10px;
+        right: 16px;
+    }
+
+    .key.black:nth-child(3){
+        margin-right: 27px; /*gap between 3 first keys and the rest */
+    }
+
+    .key.black::after {
+        font-size: 9px;
+    }
+
+}
