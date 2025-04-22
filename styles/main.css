@@ -5,6 +5,7 @@ body {
     font-family: "Poppins", sans-serif;
     background-color: #D4ECF4;
     color: #000000;
+    min-height: 100vh
   }
   
   header {
@@ -55,6 +56,7 @@ body {
     color: #FFFFFF;
     align-items: center;
     justify-content: center;
+    display: flex;
   }
   
   .main-container {
@@ -154,6 +156,13 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    
+    .main {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    } 
+
     .logo-container {
         flex-direction: column; 
         gap: 5px;
