@@ -115,6 +115,7 @@ body {
   margin: 2rem 0;
   padding: 1rem;
   background: #333;
+  background-position: center;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   height: 300px;
@@ -193,8 +194,8 @@ body {
   color: white;
   bottom: 5px;
 }
-
-@media screen and (max-width: 480px) {
+/* Small */
+@media screen and (min-width: 344px) and (max-width: 430px) {
     header {
         flex-direction: column;
         padding: 15px 20px;
@@ -232,34 +233,38 @@ body {
     }
 
     .keyboard {
-        height: 200px;
-        width: 420px;
-
+        height: 300px;
+        width: 100%; 
     }
 
-    .key.white {
-        height: 133.33px;
-        width: 33.33px;
+    .white-keys {
+        height: 100%;
+        width: 103%;
+        right: 1%;
     }
 
-    .key.black {
-        height: 70px;
-        width: 25.33px;
-        margin-right: 10px;
-        right: 16px;
+    .black-keys {
+        height: 100%;
+        width: 85%;
+        left: 8%;
     }
-
     .key.black:nth-child(3){
-        margin-right: 27px; /*gap between 3rd key and the rest */
+        margin-right: 5.5%; /*gap between 3rd key and the rest */
     }
-
+    .key.black:nth-child(1){
+        margin-left: -0%; /*gap between 1st key and the rest */
+    }
+    .key.black {
+        margin-right: 3px;
+        margin-left: 5px;
+    }
     .key.black::after {
-        font-size: 9px;
+        font-size: 60%;
     }
 
 }
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
+/*medium*/
+@media screen and (min-width: 431px) and (max-width: 758px) {
     header {
         flex-direction: column;
         padding: 20px 30px;
@@ -297,107 +302,92 @@ body {
     }
 
     .keyboard {
-        height:300px;
-        width: 720px;
-
+        height: 300px;
+        width: 100%;
+    }
+    .white-keys {
+        height: 100%;
+        width: 100%;
+        right:0%;
     }
 
-    .key.white {
-        height:189px;
-        width: 60.9px;
-    }
-
-    .key.black {
-        height: 116px;
-        width: 40px;
-        margin-right: 23px; /*gaps to the right side of the keys*/
-        right: 0px; /*pushes keys to the left as it increases right space on the screen */
-    }
-
-    .key.black:nth-child(3){
-        margin-right: 41.5px; /*gap between 3rd key and the rest */
-    }
-
-    .key.black::after {
-        font-size: 14px;
-    }
-
-}
-@media screen and (min-width: 769px;) and (max-width: 1024px){
-    .title-piano { 
+    .black-keys {
+        height: 100%;
         width: 85%;
-        font-size: 28px;
-        letter-spacing: 4px;
-        position: flex;
-        text-align: center;
     }
-
-    .keyboard {
-        height: 200px;
-        width: 420px;
-
-    }
-
-    .key.white {
-        height: 163.33px;
-        width: 63.33px;
-    }
-
-    .key.black {
-        height: 100px;
-        width: 55.33px;
-        margin-right: 40px;
-        right: 46px;
-    }
-
     .key.black:nth-child(3){
-        margin-right: 27px; /*gap between 3rd key and the rest */
+        margin-right: 6.5%; /*gap between 3rd key and the rest */
+    }
+    .key.black:nth-child(1){
+        margin-left: -4%; /*gap between 1st key and the rest */
+    }
+    .key.black {
+        margin-right: 10px;
+    }
+    .key.black::after {
+        font-size: 60%;
     }
 
-    .key.black::after {
-        font-size: 9px;
-    }
+/* large */
+@media screen and (min-width: 769px) and (max-width: 2000px) {
+    header {
+            flex-direction: column;
+            padding: 20px 30px;
+            gap: 20px;
+        }
     
-}
-@media screen and (min-width: 1441px) and (max-width: 2000px) {
-    .title-piano { /*change these and below piano settings*/
-        width: 70%;
-        font-size: 45px;
-        letter-spacing: 4px;
-        position: flex;
-        text-align: center;
-    }
-
-    .keyboard {
-        height: 800px;
-        width: 1900px;
-
-    }
-
-    .key.white {
-        height: 560px;
-        width: 165px;
-        left: 18px;
-        top: 18px;
-    }
-
-    .key.black {
-        height: 340px;
-        width: 104.33px;
-        margin-right: 63.33px;
-        left: 70px;
-        top: 18px;
-    }
-
+    .nav-list {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+    
+    .nav-list li:not(:first-child) {
+            margin-right: 0;
+        }
+    
+    .nav-link img {
+            width: 60px;
+        }
+    
+    .logo {
+            font-size: 28px;
+        }
+    
+    .logo img {
+            width: 60px;
+        }
+    
+    .title-piano { 
+            width: 85%;
+            font-size: 28px;
+            letter-spacing: 4px;
+            position: flex;
+            text-align: center;
+        }
+            
+    .white-keys {
+            height: 100%;
+            width: 103%;
+            left: 0.1%;
+        }
+    
+    .black-keys {
+            height: 100%;
+            width: 100%;
+            left: 6.5%;
+        }
     .key.black:nth-child(3){
-        margin-right: 125px; /*gap between 3rd key and the rest */
-    }
-
+            margin-right: 6.5%; /*gap between 3rd key and the rest */
+        }
+    .key.black:nth-child(1){
+            margin-left: 0%; /*gap between 1st key and the rest */
+        }
+    .key.black {
+            margin-right: 22px;
+            margin-left: 0px;
+        }
     .key.black::after {
-        font-size: 33.33px;
-    }
-
-    .key.white::after {
-        font-size: 57px;
-    }
+            font-size: 60%;
+        }
 }
