@@ -21,7 +21,6 @@ const keyMap = {
 };
 
 function playDrum(drum) {
-  console.log(`Воспроизводим звук: ${drum}`);
   switch (drum) {
     case "kick":
       kick.triggerAttackRelease("C1", "8n");
@@ -38,8 +37,6 @@ function playDrum(drum) {
     case "tom":
       tom.triggerAttackRelease("G2", "8n");
       break;
-    default:
-      console.warn(`Неизвестный звук: ${drum}`);
   }
 }
 
@@ -47,7 +44,6 @@ let audioStarted = false;
 function startAudio() {
   if (!audioStarted) {
     Tone.start().then(() => {
-      console.log("AudioContext запущен");
       audioStarted = true;
       const audioButton = document.getElementById("start-audio");
       if (audioButton) {
@@ -61,16 +57,13 @@ document.querySelectorAll(".drum").forEach(button => {
   button.addEventListener("click", () => {
     startAudio();
     const drum = button.dataset.drum;
-    console.log(`Клик по кнопке: ${drum}`);
     playDrum(drum);
   });
 });
 
 document.addEventListener("keydown", event => {
   const key = event.key.toLowerCase();
-  console.log(`Нажата клавиша: ${key}`);
   if (keyMap[key]) {
-    console.log(`Соответствует звуку: ${keyMap[key]}`);
     startAudio();
     playDrum(keyMap[key]);
 
@@ -79,8 +72,5 @@ document.addEventListener("keydown", event => {
       activeButton.classList.add("active");
       setTimeout(() => activeButton.classList.remove("active"), 100);
     }
-  } else {
-    console.log(`Клавиша ${key} не назначена`);
   }
 });
-
