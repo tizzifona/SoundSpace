@@ -93,7 +93,7 @@
     width: 70px;
   }
 
-.marimba {
+  .marimba {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,13 +140,16 @@
     border-radius: 50%;
     opacity: 0.7;
   }
+  
   .marimba-buttons button:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
+  
   .marimba-buttons button:active {
     transform: scale(0.95);
   }
+  
   .marimba-row button {
     width: 40px;
     height: 150px;
@@ -155,71 +158,85 @@
     align-items: flex-start;
     gap: 8px;
   }
+  
   .marimba-row button:nth-child(1) {
     background-color: #4a2c2a;
     width: 40px;
     height: 115px;
   }
+  
   .marimba-row button:nth-child(2) {
     background-color: #4a2c2a;
     width: 40px;
     height: 120px;
   }
+  
   .marimba-row button:nth-child(3) {
     background-color: #4a2c2a;
     width: 40px;
     height: 125px;
   }
+  
   .marimba-row button:nth-child(4) {
     background-color: #4a2c2a;
     width: 40px;
     height: 130px;
   }
+ 
   .marimba-row button:nth-child(5) {
     background-color: #4a2c2a;
     width: 40px;
     height: 135px;
   }
+ 
   .marimba-row button:nth-child(6) {
     background-color: #4a2c2a;
     width: 40px;
     height: 140px;
   }
+ 
   .marimba-row button:nth-child(7) {
     background-color: #4a2c2a;
     width: 40px;
     height: 145px;
   }
+  
   .marimba-row button:nth-child(8) {
     background-color: #4a2c2a;
     width: 40px;
     height: 150px;
   }
+ 
   .marimba-row button:nth-child(9) {
     background-color: #4a2c2a;
     width: 40px;
     height: 155px;
   }
+  
   .marimba-row button:nth-child(10) {
     background-color: #4a2c2a;
     width: 40px;
     height: 160px;
   }
+  
   .marimba-row button:nth-child(11) {
     background-color: #4a2c2a;
     width: 40px;
     height: 165px;
   }
+  
   .marimba-row button:nth-child(12) {
     background-color: #4a2c2a;
     width: 40px;
     height: 170px;
   }
+  
   .marimba-row button:nth-child(13) {
     background-color: #4a2c2a;
     width: 40px;
     height: 175px;
   }
+  
   .marimba-row button:nth-child(14) {
     background-color: #4a2c2a;
     width: 40px;
@@ -227,82 +244,90 @@
   }
   
   @media screen and (max-width: 480px) {
+    
     header {
       flex-direction: column;
       padding: 15px 20px;
       gap: 15px;
     }
-  
+    
     .nav-list {
       flex-wrap: wrap;
       justify-content: center;
       gap: 15px;
     }
-  
+    
     .nav-list li:not(:first-child) {
       margin-right: 0;
     }
-  
+    
     .nav-link img {
       width: 50px;
     }
-  
+    
     .logo {
       font-size: 24px;
     }
-  
+    
     .logo img {
       width: 50px;
     }
-
+    
     .marimba {
     width: 90%;
     }
-
+    
     .marimba-row {
     gap: 3px; 
     width: 90%;
     }
-}
 
     footer {
       font-size: 12px;
     }
-  
+   }
+
   @media screen and (min-width: 481px) and (max-width: 768px) {
+    
     header {
       flex-direction: column;
       padding: 20px 30px;
       gap: 20px;
     }
-  
+    
     .nav-list {
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
     }
-  
+    
     .nav-list li:not(:first-child) {
       margin-right: 0;
     }
-  
+    
     .nav-link img {
       width: 60px;
     }
-  
+    
     .logo {
       font-size: 28px;
     }
-  
+    
     .logo img {
       width: 60px;
     }
+    
     .marimba {
+        margin-top: 20px;
         width: 85%;
         }
     
         .marimba-row {
         gap: 4px; 
         width: 85%;
+        }
+
+    footer {
+    font-size: 10px;
         }
 }
