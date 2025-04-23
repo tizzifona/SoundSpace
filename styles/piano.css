@@ -47,7 +47,7 @@ body {
     gap: 30px;
 }
 
-.nav-list li:not(:first-child) {
+.nav-list li:last-child {
     margin-right: 40px;
 }
 
