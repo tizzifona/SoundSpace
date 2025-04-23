@@ -49,7 +49,7 @@ const keyMap = {
     ';': 'E5',
     '[': 'G#5',
     ']': 'A#5',
-    "'": 'F5'
+    "'": 'F5',
 };
 
 document.addEventListener("keydown", (e) => {
