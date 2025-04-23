@@ -169,6 +169,10 @@ footer {
   height: 180px;
 }
 
+.drum {
+  color: #ffffff;
+}
+
 .drums-row button:nth-child(1) {
   background-color: #4a2c2a;
 }
