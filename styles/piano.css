@@ -28,16 +28,18 @@ footer {
     background-color: #d4ecf4;
     padding: 10px;
     text-align: center;
-    font-weight: 14px;
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 2px;
 }
 
 body {
+    background-color: #d4ecf4;
+    color: #000000;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-}
+  }
 
 .nav-list {
     list-style: none;

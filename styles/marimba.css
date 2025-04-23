@@ -4,12 +4,20 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
   }
+
+  body {
+    background-color: #d4ecf4;
+    color: #000000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
   
   main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex:1;
     background-color: #022435;
   }
   
