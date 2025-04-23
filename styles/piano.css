@@ -196,7 +196,7 @@ body {
   color: white;
   bottom: 5px;
 }
-/* Small */
+
 @media screen and (min-width: 344px) and (max-width: 430px) {
     header {
         flex-direction: column;
@@ -250,10 +250,10 @@ body {
         left: 8%;
     }
     .key.black:nth-child(3){
-        margin-right: 5.5%; /*gap between 3rd key and the rest */
+        margin-right: 5.5%; 
     }
     .key.black:nth-child(1){
-        margin-left: -0%; /*gap between 1st key and the rest */
+        margin-left: -0%;
     }
     .key.black {
         margin-right: 3px;
@@ -264,7 +264,7 @@ body {
     }
 
 }
-/*medium*/
+
 @media screen and (min-width: 431px) and (max-width: 758px) {
     header {
         flex-direction: column;
@@ -317,10 +317,10 @@ body {
         left: 10%;
     }
     .key.black:nth-child(3){
-        margin-right: 8%; /*gap between 3rd key and the rest */
+        margin-right: 8%; 
     }
     .key.black:nth-child(1){
-        margin-left: -4%; /*gap between 1st key and the rest */
+        margin-left: -4%; 
     }
     .key.black {
         margin-right: 20px;
@@ -329,7 +329,6 @@ body {
         font-size: 60%;
     }
 
-/* large */
 @media screen and (min-width: 769px) and (max-width: 2000px) {
     header {
             flex-direction: column;
@@ -379,11 +378,9 @@ body {
         
         }
     .key.black:nth-child(3){
-            margin-right: 6.5%; /*gap between 3rd key and the rest */
+            margin-right: 6.5%; 
         }
-    /* .key.black:nth-child(1){
-            margin-left: 0%; /*gap between 1st key and the rest */
-        /* } */ 
+
     .key.black {
             margin-right: 22px;
             margin-left: 0px;

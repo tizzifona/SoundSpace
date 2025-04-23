@@ -1,4 +1,3 @@
-// java script for marimba page
 document.addEventListener("click", async () => {
     await Tone.start();
     console.log("AudioContext started");
