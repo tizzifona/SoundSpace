@@ -1,190 +1,213 @@
-/* main.css */
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background-color: #D4ECF4;
-    color: #000000;
-    min-height: 100vh
-  }
-  
+  background-color: #d4ecf4;
+  color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #d4ecf4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.logo-container img.logo {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+  justify-content: flex-start;
+}
+
+.logo-container a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+}
+.logo-container p {
+  font-size: 30px;
+  letter-spacing: 10px;
+  font-weight: 600;
+  margin: 0;
+  color: #000000;
+  justify-content: center;
+}
+
+main {
+  background-color: #022435;
+  text-align: center;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex: 1;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  flex-wrap: wrap;
+}
+
+.instrument-container {
+  background-color: #022435;
+  padding: 10px;
+  border-radius: 20px;
+  width: 250px;
+  text-align: center;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 450;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  border: none;
+  border-radius: 30px;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #d4ecf4;
+}
+
+footer {
+  background-color: #d4ecf4;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 480px) {
   header {
-    background-color: #D4ECF4;
-    padding: 5px;
-    text-align: left;
-    text-decoration: none;
+    padding: 10px 20px;
+    flex-direction: column;
+    gap: 10px;
   }
-  
+
   .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    padding: 30px;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo-container p {
+    font-size: 20px;
+    letter-spacing: 5px;
   }
 
   .logo-container img.logo {
-    height: auto;
-    width: auto;
-    max-width: 100%;
-    max-height: 60px;
-    object-fit: contain;
-    justify-content: flex-start;
+    max-height: 40px;
   }
 
-  .logo-container a {
-    text-decoration: none; 
-    color: inherit;
-    font-weight: bolder;
-    display: flex;
-    align-items: center;
-
-}
-  .logo-container p {
-    font-size: 30px;
-    letter-spacing: 10px;
-    font-weight: 600;
-    margin: 0;
-    color: #000000;
-    justify-content: center;
-   
-  }
-  
-  main {
-    background-color: #022435;
-    text-align: center;
-    color: #FFFFFF;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
-  
   .main-container {
-    display: flex;
-    justify-content: center;
-    gap: 0px;
-    flex-wrap: wrap;
+    gap: 0;
   }
-  
-  main > div > div {
-    background-color: #022435;
-    padding: 10px;
-    border-radius: 20px;
-    width: 250px;
-    text-align: center;
-    margin-bottom: 20px;
-    align-items: center;
-    justify-content: center;
+
+  .instrument-container {
+    max-width: 160px;
+    margin-bottom: 0px;
   }
-  
+
   h2 {
-    font-size: 30px;
-    font-weight: 450;
-    text-transform: uppercase;
-    letter-spacing: 8px;
-    margin-bottom: 15px;
-    text-align: center;
-    justify-content: center;
+    font-size: 18px;
   }
-  
-  img {
-    width: 100%;
-    border-radius: 12px;
-  }
-  
+
   button {
-    margin-top: 20px;
-    padding: 15px 30px;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 5px;
-    border: none;
-    border-radius: 30px;
-    background-color: #FFFFFF;
-    color: #000000;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    margin-bottom: 20px;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 0px;
   }
-  
-  button:hover {
-    background-color: #D4ECF4;;
-  }
-  
-  footer {
-    background-color: #D4ECF4;
-    text-align: center;
-    font-size: 15px;
-    width: 100%;
-    font-weight: 500    ;
-    color: #000000;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    min-height: 40px;
-    padding: 0px;
-  }
-  
-  
-
-@media screen and (max-width: 480px) {
-    .logo-container {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .main-container {
-        gap: 0;
-    }
-
-    main > div > div {
-        max-width: 160px; 
-        margin-bottom: 0px;
-    }
-    
-    h2 {
-        font-size: 18px;
-    }
-    
-    button {
-        font-size: 16px;
-        padding: 10px; 
-        margin-top: 0px;
-    }
 }
 
 @media screen and (max-width: 768px) {
-    
-    .main {
+  header {
+    padding: 15px 30px;
+  }
+
+  .logo-container {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .logo-container p {
+    font-size: 24px;
+    letter-spacing: 8px;
+  }
+
+  .logo-container img.logo {
+    max-height: 50px;
+  }
+
+  .main {
     justify-content: center;
     align-items: center;
     display: flex;
-    } 
+  }
 
-    .logo-container {
-        flex-direction: column; 
-        gap: 5px;
-    }
+  .instrument-container {
+    width: 90%;
+    max-width: 200px;
+    margin-bottom: 10px;
+    gap: 0px;
+  }
 
-    main > div > div {
-        width: 90%;
-        max-width: 200px; 
-        margin-bottom: 10px;
-        gap: 0px;
-    }
+  h2 {
+    font-size: 22px;
+    margin: auto;
+    text-align: center;
+  }
 
-    h2 {
-        font-size: 22px;
-        margin: auto; 
-        text-align: center;
-    }
-
-    button {
-        font-size: 16px;
-        margin-top: 3px; 
-        padding: 10px;
-    }
+  button {
+    font-size: 16px;
+    margin-top: 3px;
+    padding: 10px;
+  }
 }
-  

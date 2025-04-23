@@ -5,11 +5,19 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: #d4ecf4;
+  color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex: 1;
   background-color: #022435;
 }
 
@@ -156,33 +164,32 @@ footer {
   transform: scale(0.95);
 }
 
-.drums-row-top button {
-  width: 250px;
-  height: 250px;
-}
-
-.drums-row-bottom button {
+.drums-row button {
   width: 180px;
   height: 180px;
 }
 
-.drums-row-top button:nth-child(1) {
+.drum {
+  color: #ffffff;
+}
+
+.drums-row button:nth-child(1) {
   background-color: #4a2c2a;
 }
 
-.drums-row-top button:nth-child(2) {
+.drums-row button:nth-child(2) {
   background-color: #8b5a2b;
 }
 
-.drums-row-bottom button:nth-child(1) {
+.drums-row button:nth-child(3) {
   background-color: #a67c52;
 }
 
-.drums-row-bottom button:nth-child(2) {
+.drums-row button:nth-child(4) {
   background-color: #d2b48c;
 }
 
-.drums-row-bottom button:nth-child(3) {
+.drums-row button:nth-child(5) {
   background-color: #ea9e3a;
 }
 
@@ -228,14 +235,9 @@ footer {
     gap: 20px;
   }
 
-  .drums-row-top button {
-    width: 150px;
-    height: 150px;
-  }
-
-  .drums-row-bottom button {
-    width: 100px;
-    height: 100px;
+  .drums-row button {
+    width: 120px;
+    height: 120px;
   }
 }
 
@@ -281,12 +283,7 @@ footer {
     gap: 30px;
   }
 
-  .drums-row-top button {
-    width: 180px;
-    height: 180px;
-  }
-
-  .drums-row-bottom button {
+  .drums-row button {
     width: 130px;
     height: 130px;
   }
@@ -305,14 +302,9 @@ footer {
     gap: 40px;
   }
 
-  .drums-row-top button {
-    width: 200px;
-    height: 200px;
-  }
-
-  .drums-row-bottom button {
-    width: 150px;
-    height: 150px;
+  .drums-row button {
+    width: 140px;
+    height: 140px;
   }
 }
 
@@ -323,6 +315,11 @@ footer {
 
   .drums-container h1 {
     font-size: 36px;
+  }
+
+  .drums-row button {
+    width: 150px;
+    height: 150px;
   }
 }
 
@@ -335,14 +332,9 @@ footer {
     font-size: 40px;
   }
 
-  .drums-row-top button {
-    width: 300px;
-    height: 300px;
-  }
-
-  .drums-row-bottom button {
-    width: 220px;
-    height: 220px;
+  .drums-row button {
+    width: 160px;
+    height: 160px;
   }
 }
 
@@ -356,13 +348,8 @@ footer {
     letter-spacing: 8px;
   }
 
-  .drums-row-top button {
-    width: 350px;
-    height: 350px;
-  }
-
-  .drums-row-bottom button {
-    width: 250px;
-    height: 250px;
+  .drums-row button {
+    width: 180px;
+    height: 180px;
   }
 }
