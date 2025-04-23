@@ -52,6 +52,20 @@ header {
   justify-content: center;
 }
 
+.nav-link img {
+  width: 70px;
+  margin-right: 40px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #022435;
+}
+
+.nav-link:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(2, 36, 53, 0.3);
+  border: none;
+}
+
 main {
   background-color: #022435;
   text-align: center;
