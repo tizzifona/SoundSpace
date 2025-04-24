@@ -123,7 +123,6 @@ footer {
   gap: 30px;
   margin-top: 50px;
   position: relative;
-  min-height: 500px;
   width: 100%;
 }
 
@@ -226,6 +225,8 @@ footer {
     width: 90%;
   }
 
+
+
   .drums-container h1 {
     font-size: 24px;
     letter-spacing: 3px;
@@ -236,8 +237,8 @@ footer {
   }
 
   .drums-row button {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
   }
 }
 

@@ -103,6 +103,15 @@ body {
 .logo img{
     width: 70px;
 }
+
+.instruction {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    word-break: break-word;
+    max-width: 80%; 
+}
 .title-piano {
     font-weight: 500;
     margin-bottom: 20px;
