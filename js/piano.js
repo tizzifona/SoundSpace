@@ -1,11 +1,21 @@
-// java script for piano page
 const synth = new Tone.PolySynth(Tone.Synth).toDestination();
 
-function playNote(note) {
-    synth.triggerAttack(note);
-    }
+let isInitialized = false;
 
-    function stopNote(note) {
+async function initializeAudio() {
+    if (!isInitialized) {
+        await Tone.start();
+        isInitialized = true;
+    }
+}
+
+function playNote(note) {
+    initializeAudio().then(() => {
+        synth.triggerAttack(note);
+    });
+}
+
+function stopNote(note) {
     synth.triggerRelease(note);
 }
 
@@ -65,5 +75,11 @@ document.addEventListener("keyup", (e) => {
         stopNote(keyMap[e.key]);
         const button = document.querySelector(`.key[data-note="${keyMap[e.key]}"]`);
         if (button) button.classList.remove("active");
+    }
+});
+
+window.addEventListener('beforeunload', () => {
+    if (isInitialized) {
+        Tone.context.close();
     }
 });
