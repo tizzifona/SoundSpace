@@ -20,36 +20,40 @@ header {
   padding: 20px 50px;
 }
 
-.logo-container {
+.logo {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
-}
-
-.logo-container img.logo {
-  height: auto;
-  width: auto;
-  max-width: 100%;
-  max-height: 60px;
-  object-fit: contain;
-  justify-content: flex-start;
-}
-
-.logo-container a {
+  gap: 10px;
   text-decoration: none;
-  color: inherit;
-  font-weight: bolder;
-  display: flex;
-  align-items: center;
-}
-.logo-container p {
   font-size: 30px;
-  letter-spacing: 10px;
   font-weight: 600;
-  margin: 0;
-  color: #000000;
-  justify-content: center;
+  color: black;
+  letter-spacing: 5px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #022435;
+  transition: width 0.3s ease;
+}
+
+.logo:hover::after {
+  width: 100%;
+}
+
+.logo:hover {
+  color: #022435;
+}
+
+.logo img {
+  width: 70px;
 }
 
 .nav-link img {
