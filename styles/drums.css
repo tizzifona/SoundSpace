@@ -1,1 +1,359 @@
-/* styles for drums page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #d4ecf4;
+  color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: #022435;
+}
+
+header {
+  background-color: #d4ecf4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+footer {
+  background-color: #d4ecf4;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-list li:last-child {
+  margin-right: 40px;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-link img {
+  width: 70px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #022435;
+}
+
+.nav-link:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(2, 36, 53, 0.3);
+  border: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 5px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #022435;
+  transition: width 0.3s ease;
+}
+
+.logo:hover::after {
+  width: 100%;
+}
+
+.logo:hover {
+  color: #022435;
+}
+
+.logo img {
+  width: 70px;
+}
+
+.drums-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  text-align: center;
+}
+
+.drums-container h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.drums-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.drums-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+}
+
+.drums-buttons button {
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.drums-buttons button::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px dotted #ffffff;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.drums-buttons button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.drums-buttons button:active {
+  transform: scale(0.95);
+}
+
+.drums-buttons button.active {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.drums-row button {
+  width: 180px;
+  height: 180px;
+}
+
+.drum {
+  color: #ffffff;
+}
+
+.drums-row button:nth-child(1) {
+  background-color: #4a2c2a;
+}
+
+.drums-row button:nth-child(2) {
+  background-color: #8b5a2b;
+}
+
+.drums-row button:nth-child(3) {
+  background-color: #a67c52;
+}
+
+.drums-row button:nth-child(4) {
+  background-color: #d2b48c;
+}
+
+.drums-row button:nth-child(5) {
+  background-color: #ea9e3a;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-list li:not(:first-child) {
+    margin-right: 0;
+  }
+
+  .nav-link img {
+    width: 50px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .logo img {
+    width: 50px;
+  }
+
+  .drums-container {
+    width: 90%;
+  }
+
+  .drums-container h1 {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+
+  .drums-row {
+    gap: 20px;
+  }
+
+  .drums-row button {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px 30px;
+    gap: 20px;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .nav-list li:not(:first-child) {
+    margin-right: 0;
+  }
+
+  .nav-link img {
+    width: 60px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .drums-container {
+    width: 85%;
+  }
+
+  .drums-container h1 {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+
+  .drums-row {
+    gap: 30px;
+  }
+
+  .drums-row button {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .drums-container {
+    width: 80%;
+  }
+
+  .drums-container h1 {
+    font-size: 32px;
+  }
+
+  .drums-row {
+    gap: 40px;
+  }
+
+  .drums-row button {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .drums-container {
+    width: 75%;
+  }
+
+  .drums-container h1 {
+    font-size: 36px;
+  }
+
+  .drums-row button {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 2000px) {
+  .drums-container {
+    width: 70%;
+  }
+
+  .drums-container h1 {
+    font-size: 40px;
+  }
+
+  .drums-row button {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media screen and (min-width: 2001px) {
+  .drums-container {
+    width: 60%;
+  }
+
+  .drums-container h1 {
+    font-size: 48px;
+    letter-spacing: 8px;
+  }
+
+  .drums-row button {
+    width: 180px;
+    height: 180px;
+  }
+}

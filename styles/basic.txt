@@ -1,0 +1,8 @@
+for font use:  font-family: "Poppins", sans-serif;
+
+
+for colors: 
+light-blue:  #D4ECF4
+dark-blue:  #022435
+color of text black:  #000000
+color of tet white:  #FFFFFF
