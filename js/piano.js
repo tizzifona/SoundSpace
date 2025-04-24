@@ -1,4 +1,23 @@
-const synth = new Tone.PolySynth(Tone.Synth).toDestination();
+const synth = new Tone.PolySynth(Tone.Synth, {
+  oscillator: {
+    type: "triangle",
+    partials: [1, 2, 3, 4, 5, 6, 7, 8],
+  },
+  envelope: {
+    attack: 0.001,
+    decay: 0.3,
+    sustain: 0.5,
+    release: 1.2,
+  },
+  volume: -6,
+}).toDestination();
+
+const reverb = new Tone.Reverb({
+  decay: 2.5,
+  wet: 0.2,
+}).toDestination();
+
+synth.connect(reverb);
 
 let isInitialized = false;
 
