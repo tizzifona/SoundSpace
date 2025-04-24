@@ -1,341 +1,357 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #d4ecf4;
+  color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: #022435;
+}
+
+header {
+  background-color: #d4ecf4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+footer {
+  background-color: #d4ecf4;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-list li:last-child {
+  margin-right: 40px;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-link img {
+  width: 70px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #022435;
+}
+
+.nav-link:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(2, 36, 53, 0.3);
+  border: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 5px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #022435;
+  transition: width 0.3s ease;
+}
+
+.logo:hover::after {
+  width: 100%;
+}
+
+.logo:hover {
+  color: #022435;
+}
+
+.logo img {
+  width: 70px;
+}
+
+.marimba {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #ffffff;
+}
+
+.marimba p {
+  margin-bottom: 100px;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 80%;
+  text-align: center;
+}
+
+.marimba-button {
+  color: #ffffff;
+}
+
+.marimba h1 {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.marimba-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.marimba-container {
+  background-color: #022435;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+}
+
+.marimba-buttons button::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px dotted #ffffff;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.marimba-buttons button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.marimba-buttons button:active {
+  transform: scale(0.95);
+}
+
+.marimba-row button.active {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.marimba-row button {
+  width: 40px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.marimba-row button:nth-child(1) {
+  background-color: #4a2c2a;
+  width: 40px;
+  height: 180px;
+}
+
+.marimba-row button:nth-child(2) {
+  background-color: #4a2c2a;
+  width: 40px;
+  height: 175px;
+}
+
+.marimba-row button:nth-child(3) {
+  background-color: #4a2c2a;
+  width: 40px;
+  height: 165px;
+}
+
+.marimba-row button:nth-child(4) {
+  background-color: #4a2c2a;
+  width: 40px;
+  height: 160px;
+}
+
+.marimba-row button:nth-child(5) {
+  background-color: #4a2c2a;
+  width: 40px;
+  height: 155px;
+}
+
+.marimba-row button:nth-child(6) {
+  background-color: #4a2c2a;
+  width: 40px;
+  height: 150px;
+}
+
+.marimba-row button:nth-child(7) {
+  background-color: #4a2c2a;
+  width: 40px;
+  height: 145px;
+}
+
+.marimba-row button:nth-child(8) {
+  background-color: #4a2c2a;
+  width: 40px;
+  height: 140px;
+}
+
+.marimba-row button:nth-child(9) {
+  background-color: #4a2c2a;
+  width: 40px;
+  height: 135px;
+}
+
+.marimba-row button:nth-child(10) {
+  background-color: #4a2c2a;
+  width: 40px;
+  height: 130px;
+}
+
+.marimba-row button:nth-child(11) {
+  background-color: #4a2c2a;
+  width: 40px;
+  height: 125px;
+}
+
+.marimba-row button:nth-child(12) {
+  background-color: #4a2c2a;
+  width: 40px;
+  height: 120px;
+}
+
+.marimba-row button:nth-child(13) {
+  background-color: #4a2c2a;
+  width: 40px;
+  height: 115px;
+}
+
+.marimba-row button:nth-child(14) {
+  background-color: #4a2c2a;
+  width: 40px;
+  height: 110px;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
   }
 
-  body {
-    background-color: #d4ecf4;
-    color: #000000;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex:1;
-    background-color: #022435;
-  }
-  
-  header {
-    background-color: #d4ecf4;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-  }
-  
-  footer {
-    background-color: #d4ecf4;
-    padding: 10px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
-  
   .nav-list {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
   }
-  
-  .nav-list li:last-child {
-    margin-right: 40px;
+
+  .nav-list li:not(:first-child) {
+    margin-right: 0;
   }
-  
-  .nav-link {
-    text-decoration: none;
-  }
-  
+
   .nav-link img {
-    width: 70px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    border: 1px solid #022435;
+    width: 50px;
   }
-  
-  .nav-link:hover img {
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(2, 36, 53, 0.3);
-    border: none;
-  }
-  
+
   .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 600;
-    color: black;
-    letter-spacing: 5px;
-    position: relative;
-    transition: all 0.3s ease;
+    font-size: 24px;
   }
-  
-  .logo::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: #022435;
-    transition: width 0.3s ease;
-  }
-  
-  .logo:hover::after {
-    width: 100%;
-  }
-  
-  .logo:hover {
-    color: #022435;
-  }
-  
+
   .logo img {
-    width: 70px;
+    width: 50px;
   }
 
   .marimba {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    width: 90%;
   }
 
-  .marimba h1 {
-    display: flex;
-    justify-content: center;
-    font-weight: 500;
-    margin-bottom: 20px;
-    color: #ffffff;
-    font-size: 40px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-  }
- 
   .marimba-row {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
-  }
-
-  .marimba-container {
-    background-color: #022435;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
-  }
-
-  .marimba-buttons button::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border: 2px dotted #ffffff;
-    border-radius: 50%;
-    opacity: 0.7;
-  }
-  
-  .marimba-buttons button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-  
-  .marimba-buttons button:active {
-    transform: scale(0.95);
-  }
-  
-  .marimba-row button {
-    width: 40px;
-    height: 150px;
-    display: flex;          
-    justify-content: center;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  
-  .marimba-row button:nth-child(1) {
-    background-color: #4a2c2a;
-    width: 40px;
-    height: 180px;
-  }
-  
-  .marimba-row button:nth-child(2) {
-    background-color: #4a2c2a;
-    width: 40px;
-    height: 175px;
-  }
-  
-  .marimba-row button:nth-child(3) {
-    background-color: #4a2c2a;
-    width: 40px;
-    height: 165px;
-  }
-  
-  .marimba-row button:nth-child(4) {
-    background-color: #4a2c2a;
-    width: 40px;
-    height: 160px;
-  }
- 
-  .marimba-row button:nth-child(5) {
-    background-color: #4a2c2a;
-    width: 40px;
-    height: 155px;
-  }
- 
-  .marimba-row button:nth-child(6) {
-    background-color: #4a2c2a;
-    width: 40px;
-    height: 150px;
-  }
- 
-  .marimba-row button:nth-child(7) {
-    background-color: #4a2c2a;
-    width: 40px;
-    height: 145px;
-  }
-  
-  .marimba-row button:nth-child(8) {
-    background-color: #4a2c2a;
-    width: 40px;
-    height: 140px;
-  }
- 
-  .marimba-row button:nth-child(9) {
-    background-color: #4a2c2a;
-    width: 40px;
-    height: 135px;
-  }
-  
-  .marimba-row button:nth-child(10) {
-    background-color: #4a2c2a;
-    width: 40px;
-    height: 130px;
-  }
-  
-  .marimba-row button:nth-child(11) {
-    background-color: #4a2c2a;
-    width: 40px;
-    height: 125px;
-  }
-  
-  .marimba-row button:nth-child(12) {
-    background-color: #4a2c2a;
-    width: 40px;
-    height: 120px;
-  }
-  
-  .marimba-row button:nth-child(13) {
-    background-color: #4a2c2a;
-    width: 40px;
-    height: 115px;
-  }
-  
-  .marimba-row button:nth-child(14) {
-    background-color: #4a2c2a;
-    width: 40px;
-    height: 110px;
-  }
-  
-  @media screen and (max-width: 480px) {
-    
-    header {
-      flex-direction: column;
-      padding: 15px 20px;
-      gap: 15px;
-    }
-    
-    .nav-list {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-    
-    .nav-list li:not(:first-child) {
-      margin-right: 0;
-    }
-    
-    .nav-link img {
-      width: 50px;
-    }
-    
-    .logo {
-      font-size: 24px;
-    }
-    
-    .logo img {
-      width: 50px;
-    }
-    
-    .marimba {
+    gap: 3px;
     width: 90%;
-    }
-    
-    .marimba-row {
-    gap: 3px; 
-    width: 90%;
-    }
+  }
 
-    footer {
-      font-size: 12px;
-    }
-   }
+  footer {
+    font-size: 12px;
+  }
+}
 
-  @media screen and (min-width: 481px) and (max-width: 768px) {
-    
-    header {
-      flex-direction: column;
-      padding: 20px 30px;
-      gap: 20px;
-    }
-    
-    .nav-list {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    
-    .nav-list li:not(:first-child) {
-      margin-right: 0;
-    }
-    
-    .nav-link img {
-      width: 60px;
-    }
-    
-    .logo {
-      font-size: 28px;
-    }
-    
-    .logo img {
-      width: 60px;
-    }
-    
-    .marimba {
-        margin-top: 20px;
-        width: 85%;
-        }
-    
-        .marimba-row {
-        gap: 4px; 
-        width: 85%;
-        }
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px 30px;
+    gap: 20px;
+  }
 
-    footer {
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .nav-list li:not(:first-child) {
+    margin-right: 0;
+  }
+
+  .nav-link img {
+    width: 60px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .marimba {
+    margin-top: 20px;
+    width: 85%;
+  }
+
+  .marimba-row {
+    gap: 4px;
+    width: 85%;
+  }
+
+  footer {
     font-size: 10px;
-        }
+  }
 }

@@ -1,32 +1,30 @@
 let isInitialized = false;
 
 async function initializeAudio() {
-    if (!isInitialized) {
-        await Tone.start();
-        isInitialized = true;
-    }
+  if (!isInitialized) {
+    await Tone.start();
+    isInitialized = true;
+    console.log("AudioContext started");
+  }
 }
 
-document.addEventListener("click", async () => {
-    await initializeAudio();
-    console.log("AudioContext started");
-  }, { once: true });
-  const synth = new Tone.Synth({
-    oscillator: { type: "triangle" },
-    envelope: { attack: 0.02, decay: 0.1, sustain: 0.3, release: 0.5 }
-  }).toDestination();
-  function playNote(note) {
-    initializeAudio().then(() => {
-        synth.triggerAttackRelease(note, "8n");
-    });
-  }
-  const buttons = document.querySelectorAll(".marimba-button");
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      const note = button.dataset.bar;
-      playNote(note);
-    });
+document.addEventListener("click", initializeAudio, { once: true });
+document.addEventListener("keydown", initializeAudio, { once: true });
+
+const synth = new Tone.Synth({
+  oscillator: { type: "triangle" },
+  envelope: { attack: 0.02, decay: 0.1, sustain: 0.3, release: 0.5 },
+}).toDestination();
+
+function playNote(note) {
+  initializeAudio().then(() => {
+    synth.triggerAttackRelease(note, "8n");
   });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".marimba-button");
+
   const keyMap = {
     a: "C4",
     s: "D4",
@@ -41,17 +39,35 @@ document.addEventListener("click", async () => {
     w: "F5",
     e: "G5",
     r: "A5",
-    t: "B5"
+    t: "B5",
   };
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const note = button.dataset.bar;
+      playNote(note);
+
+      button.classList.add("active");
+      setTimeout(() => button.classList.remove("active"), 100);
+    });
+  });
+
   document.addEventListener("keydown", (e) => {
     const note = keyMap[e.key.toLowerCase()];
     if (note) {
       playNote(note);
+
+      const activeButton = document.querySelector(`[data-bar="${note}"]`);
+      if (activeButton) {
+        activeButton.classList.add("active");
+        setTimeout(() => activeButton.classList.remove("active"), 100);
+      }
     }
   });
 
-window.addEventListener('beforeunload', () => {
+  window.addEventListener("beforeunload", () => {
     if (isInitialized) {
-        Tone.context.close();
+      Tone.context.close();
     }
+  });
 });

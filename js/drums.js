@@ -1,23 +1,23 @@
 const kick = new Tone.MembraneSynth().toDestination();
 const snare = new Tone.NoiseSynth({
-  envelope: { attack: 0.001, decay: 0.2, sustain: 0 }
+  envelope: { attack: 0.001, decay: 0.2, sustain: 0 },
 }).toDestination();
 const hihat = new Tone.MetalSynth({
   frequency: 400,
-  envelope: { attack: 0.001, decay: 0.1, release: 0.01 }
+  envelope: { attack: 0.001, decay: 0.1, release: 0.01 },
 }).toDestination();
 const crash = new Tone.MetalSynth({
   frequency: 300,
-  envelope: { attack: 0.001, decay: 1.4, release: 0.5 }
+  envelope: { attack: 0.001, decay: 1.4, release: 0.5 },
 }).toDestination();
 const tom = new Tone.MembraneSynth().toDestination();
 
 const keyMap = {
-  "q": "kick",
-  "w": "snare",
-  "e": "hihat",
-  "r": "crash",
-  "t": "tom"
+  q: "kick",
+  w: "snare",
+  e: "hihat",
+  r: "crash",
+  t: "tom",
 };
 
 function playDrum(drum) {
@@ -45,10 +45,10 @@ function playDrum(drum) {
 let isInitialized = false;
 
 async function initializeAudio() {
-    if (!isInitialized) {
-        await Tone.start();
-        isInitialized = true;
-    }
+  if (!isInitialized) {
+    await Tone.start();
+    isInitialized = true;
+  }
 }
 
 let audioStarted = false;
@@ -64,7 +64,7 @@ function startAudio() {
   }
 }
 
-document.querySelectorAll(".drum").forEach(button => {
+document.querySelectorAll(".drum").forEach((button) => {
   button.addEventListener("click", () => {
     startAudio();
     const drum = button.dataset.drum;
@@ -72,7 +72,7 @@ document.querySelectorAll(".drum").forEach(button => {
   });
 });
 
-document.addEventListener("keydown", event => {
+document.addEventListener("keydown", (event) => {
   const key = event.key.toLowerCase();
   if (keyMap[key]) {
     startAudio();
@@ -86,8 +86,8 @@ document.addEventListener("keydown", event => {
   }
 });
 
-window.addEventListener('beforeunload', () => {
-    if (isInitialized) {
-        Tone.context.close();
-    }
+window.addEventListener("beforeunload", () => {
+  if (isInitialized) {
+    Tone.context.close();
+  }
 });
