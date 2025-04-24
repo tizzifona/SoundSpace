@@ -12,9 +12,29 @@ document.addEventListener("click", initializeAudio, { once: true });
 document.addEventListener("keydown", initializeAudio, { once: true });
 
 const synth = new Tone.Synth({
-  oscillator: { type: "triangle" },
-  envelope: { attack: 0.02, decay: 0.1, sustain: 0.3, release: 0.5 },
-}).toDestination();
+  oscillator: { type: "sine" },
+  envelope: { 
+    attack: 0.001,
+    decay: 0.2,
+    sustain: 0.1,
+    release: 0.3
+  },
+}).chain(
+  new Tone.FrequencyShifter({
+    frequency: 0.5,
+    phase: 0
+  }),
+  new Tone.Reverb({
+    decay: 0.5,
+    wet: 0.2
+  }),
+  new Tone.Compressor({
+    threshold: -24,
+    ratio: 12,
+    attack: 0.003,
+    release: 0.25
+  })
+).toDestination();
 
 function playNote(note) {
   initializeAudio().then(() => {
