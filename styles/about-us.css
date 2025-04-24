@@ -177,6 +177,10 @@ footer {
   .member-container img {
     margin-bottom: 20px;
   }
+
+  .nav-link img {
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
