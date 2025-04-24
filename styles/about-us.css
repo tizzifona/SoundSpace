@@ -123,6 +123,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
+    
   }
   
   footer {
@@ -169,6 +170,10 @@
     h2 {
       font-size: 18px;
     }
+
+    .member-container img {
+      margin-bottom: 20px;
+    }
   
   }
   
@@ -207,6 +212,10 @@
       font-size: 22px;
       margin: auto;
       text-align: center;
+    }
+
+    .member-container img {
+      margin-bottom: 20px;
     }
   
   }
