@@ -21,23 +21,34 @@ const keyMap = {
 };
 
 function playDrum(drum) {
-  switch (drum) {
-    case "kick":
-      kick.triggerAttackRelease("C1", "8n");
-      break;
-    case "snare":
-      snare.triggerAttackRelease("8n");
-      break;
-    case "hihat":
-      hihat.triggerAttackRelease("16n");
-      break;
-    case "crash":
-      crash.triggerAttackRelease("1n");
-      break;
-    case "tom":
-      tom.triggerAttackRelease("G2", "8n");
-      break;
-  }
+  initializeAudio().then(() => {
+    switch (drum) {
+      case "kick":
+        kick.triggerAttackRelease("C1", "8n");
+        break;
+      case "snare":
+        snare.triggerAttackRelease("8n");
+        break;
+      case "hihat":
+        hihat.triggerAttackRelease("16n");
+        break;
+      case "crash":
+        crash.triggerAttackRelease("1n");
+        break;
+      case "tom":
+        tom.triggerAttackRelease("G2", "8n");
+        break;
+    }
+  });
+}
+
+let isInitialized = false;
+
+async function initializeAudio() {
+    if (!isInitialized) {
+        await Tone.start();
+        isInitialized = true;
+    }
 }
 
 let audioStarted = false;
@@ -73,4 +84,10 @@ document.addEventListener("keydown", event => {
       setTimeout(() => activeButton.classList.remove("active"), 100);
     }
   }
+});
+
+window.addEventListener('beforeunload', () => {
+    if (isInitialized) {
+        Tone.context.close();
+    }
 });

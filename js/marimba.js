@@ -1,5 +1,14 @@
+let isInitialized = false;
+
+async function initializeAudio() {
+    if (!isInitialized) {
+        await Tone.start();
+        isInitialized = true;
+    }
+}
+
 document.addEventListener("click", async () => {
-    await Tone.start();
+    await initializeAudio();
     console.log("AudioContext started");
   }, { once: true });
   const synth = new Tone.Synth({
@@ -7,7 +16,9 @@ document.addEventListener("click", async () => {
     envelope: { attack: 0.02, decay: 0.1, sustain: 0.3, release: 0.5 }
   }).toDestination();
   function playNote(note) {
-    synth.triggerAttackRelease(note, "8n");
+    initializeAudio().then(() => {
+        synth.triggerAttackRelease(note, "8n");
+    });
   }
   const buttons = document.querySelectorAll(".marimba-button");
   buttons.forEach(button => {
@@ -38,3 +49,9 @@ document.addEventListener("click", async () => {
       playNote(note);
     }
   });
+
+window.addEventListener('beforeunload', () => {
+    if (isInitialized) {
+        Tone.context.close();
+    }
+});
