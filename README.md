@@ -26,21 +26,27 @@ Users can:
 
 ## ✅ Prerequisites:
 
-Docker
-(Optional) Docker Compose
+### Running the project with Dockerfile2
 
-1. Build and Run
-   Build the Docker image:
+1. Open your terminal and navigate to the project folder.
 
-`docker build -f Dockerfile2 -t soundspace-app .`
+2. Build the Docker image using Dockerfile2:
 
-2. Run the container:
+   ```sh
+   docker build -f Dockerfile2 -t soundspace-app .
+   ```
 
-`docker run --rm -p 8080:80 soundspace-app`
+3. Run the container:
 
-3. Access the app in your browser at:
+   ```sh
+   docker run --rm -p 8080:80 --name soundspace soundspace-app
+   ```
 
-http://localhost:8080
+4. Open your browser and go to:
+   [http://localhost:8080](http://localhost:8080)
+
+5. To stop the container, press `Ctrl+C` in the terminal.
+
 
 ## 🗂️ Project Diagram
 
@@ -74,52 +80,4 @@ The current version is designed primarily for desktop, but it is potentially ext
 
 Developed by Team #4 as a learnig project for FemCoders.
 
-## Запуск проекта с помощью Dockerfile2
 
-1. Откройте терминал и перейдите в папку проекта:
-
-   ```sh
-   cd /Users/nomi/Documents/FemCoders25/soundspace
-   ```
-
-2. Соберите Docker-образ с помощью Dockerfile2:
-
-   ```sh
-   docker build -f Dockerfile2 -t soundspace-app .
-   ```
-
-3. Запустите контейнер:
-
-   ```sh
-   docker run --rm -p 8080:80 soundspace-app
-   ```
-
-4. Откройте сайт в браузере:
-   [http://localhost:8080](http://localhost:8080)
-
-5. Чтобы остановить контейнер, нажмите `Ctrl+C` в терминале.
-
-## Running the project with Dockerfile2 (English)
-
-1. Open your terminal and navigate to the project folder:
-
-   ```sh
-   cd /Users/nomi/Documents/FemCoders25/soundspace
-   ```
-
-2. Build the Docker image using Dockerfile2:
-
-   ```sh
-   docker build -f Dockerfile2 -t soundspace-app .
-   ```
-
-3. Run the container:
-
-   ```sh
-   docker run --rm -p 8080:80 soundspace-app
-   ```
-
-4. Open your browser and go to:
-   [http://localhost:8080](http://localhost:8080)
-
-5. To stop the container, press `Ctrl+C` in the terminal.
